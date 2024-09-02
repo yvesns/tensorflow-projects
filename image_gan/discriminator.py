@@ -10,7 +10,7 @@ def get_optimizer():
     return optimizer
 
 def get_loss(real_output, fake_output):
-    # fake_output here is the discriminator's evaluations of the real images.
+    # real_output here is the discriminator's evaluations of the real images.
     real_loss = cross_entropy(
         tf.ones_like(real_output), 
         real_output
